@@ -4,6 +4,26 @@ If you would like to use the demo application to see how the SDK works via devel
 
 If you would like to see the API documentation and instructions on how to use the SDK, please see README.md in client folder.
 
+### ENVIRONMENT SETUP (REQUIRED!)
+
+Please follow the instructions below upon downloading this repo in order to set up your development environment.
+
+1. Create your virtual environment for Python:
+    a. Make sure you have Python installed (run python --version in terminal to check)
+    b. Navigate to the 'heygen_takehome' project directory in terminal
+    c. Run 'python -m venv .venv' in terminal
+    d. Run either 'source .venv/bin/activate' (mac) or '.\.venv\Scripts\activate' (windows)
+        - You should now see the virtual environment in your terminal prompt! 
+    e. Navigate to the 'backend' subdirectory in terminal (cd backend)
+    f. Run 'pip install -r requirements.txt'
+2. Navigate to both client and demo folders and run 'npm install' to download all modules.
+3. TO RUN THE DEMO APP: Open a terminal, navigate to the 'demo' folder, run 'npm run dev'.
+4. TO RUN THE TRANSLATION SERVER: Open a terminal, navigate to the 'backend' folder, run 'python manage.py runserver'
+
+Both servers need to be run in order to simulate the full process.
+
+You can also run the integration tests in the 'client' folder, but make sure to close both existing servers so that Jest can use them to run tests. The command to run the tests is 'npm test'.
+
 ### GENERAL
 
 Hello Heygen Team, thank you for giving me the opportunity to work on this takehome! It was pretty fun.
