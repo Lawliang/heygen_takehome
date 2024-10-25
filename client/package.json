@@ -1,0 +1,13 @@
+{
+    "name": "heygen-client-sdk",
+    "version": "1.0.0",
+    "description": "Client library to fetch and cache video translation status.",
+    "main": "src/index.js",
+    "scripts": {
+      "start": "node examples/example.js"
+    },
+    "dependencies": {
+      "node-fetch": "^3.3.0"
+    },
+    "type": "module"
+  }
