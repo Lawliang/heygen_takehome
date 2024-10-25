@@ -3,6 +3,7 @@ import path from 'path';
 import { spawn } from 'child_process';
 import { validate } from 'uuid';
 
+
 let serverProcess;
 let sdk;
 
@@ -12,7 +13,7 @@ beforeAll((done) => {
     serverProcess = spawn('python', ['manage.py', 'runserver']);
     // Wait 3s for the server to start
     setTimeout(() => {
-        sdk = new VideoTranslationSDK('your-api-key'); // Initialize sdk after server starts
+        sdk = new VideoTranslationSDK('Demo123'); // Initialize sdk after server starts
         if (serverProcess) console.log('Successfully spun up server.');
         done();
     }, 2000);
