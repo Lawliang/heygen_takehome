@@ -1,6 +1,6 @@
-import {useState, useRef} from "react"
+import { useRef } from "react"
 import './App.css'
-import VideoTranslationSDK from "../../client/library/VideoTranslationSDK"
+import VideoTranslationSDK from "../../client/src/VideoTranslationSDK"
 
 // initialize the client library
 const heygenSDK = new VideoTranslationSDK(
@@ -22,7 +22,7 @@ function App() {
   const handleCreateJob = async () => {
     try {
       const jobId = await heygenSDK.createJob();
-      console.log(`Job Created. ID: ${jobId}`)
+      console.log(`Created job with ID: ${jobId}`);
     } catch (error) {
       console.error(`Failed to create job: ${error}`)
     }

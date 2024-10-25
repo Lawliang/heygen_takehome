@@ -12,7 +12,7 @@ def simulate_translation_job(job):
     """Simulate the video translation job with random delay & chance of erroring."""
     total_time = time.time() - job.start_time.timestamp()
 
-    """Mock Logic for simulating video translation job status result"""
+    """Mock Logic for simulating the video translation job status + erroring"""
     if job.status == "pending":
         if random.random() < ERROR_RATE:
             job.status = "error"
