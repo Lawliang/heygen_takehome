@@ -4,8 +4,9 @@ from .config import MAX_JOB_DURATION, ERROR_RATE
 from .models import VideoTranslationJob
 
 def create_new_job():
+    random_duration = random.randint(1, 180)
     """Creates and stores a new video translation job into the database"""
-    job = VideoTranslationJob.objects.create()
+    job = VideoTranslationJob.objects.create(video_duration=random_duration)
     return job
 
 def simulate_translation_job(job):

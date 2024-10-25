@@ -23,18 +23,17 @@ To use the `VideoTranslationSDK`, you need to include it in your project. You ca
 
 #### `createJob()`
 
-- Description: Initiates a new video translation job on the server.
+- Description: Initiates a new video translation job on the server, returns the job ID.
 - Inputs: None
-- Returns: A promise that resolves to a string representing the job ID (UUID).
+- Outputs: A promise that resolves to a string representing the job ID (UUID).
 
 #### `getStatus(jobId)`
 
-- Description: Fetches the current status of a specified job. Utilizes cached data if available and valid.
-- Inputs:
-    1. `jobId` (string): The ID of the job whose status is to be fetched.
-- Returns: A promise that resolves to an object containing the job status.
+- Description: Takes in the job ID as the first parameter and returns the current status of a specific job.
+- Inputs: (jobId: string)
+- Outputs: A promise that resolves to an object containing the job status.
 
-## Example Application
+## Demo Application
 
 To see how a third-party application might use the `VideoTranslationSDK`, please refer to App.jsx in the 'demo' folder as an example. 
 This demo is a simple React application that utilizes both methods to access the status for specific jobs.

@@ -7,6 +7,7 @@ class VideoTranslationJob(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     status = models.CharField(max_length=20, default="pending")
     start_time = models.DateTimeField(auto_now_add=True)
+    video_duration = models.IntegerField()
     
     def __str__(self):
-        return f"Job {self.id} - Status: {self.status}"
+        return f"Job {self.id} - Status: {self.status} - Video Duration: {self.video_duration}"

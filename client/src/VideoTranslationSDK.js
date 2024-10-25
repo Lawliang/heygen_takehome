@@ -18,7 +18,12 @@ export default class VideoTranslationSDK {
     // Fetches the status of a job from the server
     async fetchStatus(jobId) {
         try {
-            const response = await fetch(`${this.baseUrl}/api/status/${jobId}/`);
+            const response = await fetch(`${this.baseUrl}/api/status/${jobId}/`, {
+                method: 'GET',
+                headers: {
+                  'Authorization': this.apiKey,
+                },
+            });
             if (!response.ok) {
                 throw new Error(`Error fetching job status: ${response.statusText}`);
             }
@@ -44,7 +49,13 @@ export default class VideoTranslationSDK {
     // Creates a new job on the server
     async createJob() {
         try {
-            const response = await fetch(`${this.baseUrl}/api/create-job/`);
+            const response = await fetch(`${this.baseUrl}/api/create-job/`, {
+                method: 'GET',
+                headers: {
+                  'Authorization': this.apiKey,
+                },
+            });
+            console.log('apikey:', this.apiKey)
             if (!response.ok) {
                 throw new Error(`Error fetching job status: ${response.statusText}`);
             }

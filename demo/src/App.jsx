@@ -1,12 +1,6 @@
-import { useRef } from "react"
+import { useRef } from 'react'
+import heygenSDK from './api/heygenSDK'
 import './App.css'
-import VideoTranslationSDK from "../../client/src/VideoTranslationSDK"
-
-// initialize the client library
-const heygenSDK = new VideoTranslationSDK(
-  'http://localhost:8000/status',
-  'your-api-key-here',
-)
 
 function App() {
   const inputRef = useRef(null)
