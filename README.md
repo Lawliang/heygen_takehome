@@ -17,8 +17,8 @@ Please follow the instructions below upon downloading this repo in order to set 
     e. Navigate to the 'backend' subdirectory in terminal (cd backend)
     f. Run 'pip install -r requirements.txt'
 2. Navigate to both client and demo folders and run 'npm install' to download all modules.
-3. TO RUN THE DEMO APP: Open a terminal, navigate to the 'demo' folder, run 'npm run dev'.
-4. TO RUN THE TRANSLATION SERVER: Open a terminal, navigate to the 'backend' folder, run 'python manage.py runserver'
+3. TO RUN THE TRANSLATION SERVER: Navigate to the 'backend' folder, then run 'python manage.py runserver'
+4. TO RUN THE DEMO APP: Open a new terminal, navigate to the 'demo' folder, then run 'npm run dev'.
 
 Both servers need to be run in order to simulate the full process.
 

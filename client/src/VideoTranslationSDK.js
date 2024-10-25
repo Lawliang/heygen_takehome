@@ -55,7 +55,6 @@ export default class VideoTranslationSDK {
                   'Authorization': this.apiKey,
                 },
             });
-            console.log('apikey:', this.apiKey)
             if (!response.ok) {
                 throw new Error(`Error fetching job status: ${response.statusText}`);
             }
